@@ -1,3 +1,6 @@
-/**
- * Created by speedly on 2017/11/25.
- */
+let getters = {
+  totalPrice:(state)=>state.cartList.reduce((prev,next)=>prev+next.count*next.bookPrice,0),
+  list:(state)=>state.cartList
+}
+
+export default getters
